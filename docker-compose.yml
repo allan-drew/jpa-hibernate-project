@@ -1,0 +1,15 @@
+version: '2.4'
+
+services:
+  db:
+    image: mysql #https://hub.docker.com/_/mysql
+    container_name: first_jpa
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - first_jpa:/var/lib/mysql
+
+volumes:
+  first_jpa:
